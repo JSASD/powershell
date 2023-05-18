@@ -6,7 +6,10 @@ $endDate = (Get-Date).ToString("yyyy-MM-dd")
 $fileName = "${startDate}--${endDate}"
 
 # Specify the path to the logs folder
-$Logs = "\\js-vessel\Technology\Logs"
+$Logs = "\\js-vessel\Technology\Logging\Server-Security-Logs"
+
+# Specify the path to the destination folder
+$Master = "\\js-vessel\Technology\Logging\Server-Security-Logs\Master"
 
 # Get a list of CSV files in the logs folder, excluding the current file
 $CSV = Get-ChildItem $Logs\*.csv -Exclude "$Logs\$fileName _Server_Security_Logs.csv"
@@ -14,8 +17,8 @@ $CSV = Get-ChildItem $Logs\*.csv -Exclude "$Logs\$fileName _Server_Security_Logs
 # Merge the content of all CSV files into a single variable
 $Merged = Get-Content $CSV
 
-# Save the merged content to a new CSV file with the specified file name
-$Merged | Set-Content "$Logs\$fileName _Server_Security_Logs.csv"
+# Save the merged content to a new CSV file with the specified file name in the target directory
+$Merged | Set-Content "$Master\$fileName _Server_Security_Logs.csv"
 
 # Remove all CSV files in the logs folder except the newly created file
 $CSV | Where-Object {$_.Name -ne "$fileName _Server_Security_Logs.csv"} | Remove-Item -Force

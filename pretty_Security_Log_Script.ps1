@@ -1,5 +1,5 @@
 # Set the path where the logs will be saved
-$path = "\\js-vessel\Technology\Logs"
+$path = "\\js-vessel\Technology\Logging\Server-Security-Logs"
 
 # Set the start date for retrieving events (7 days ago from current date)
 $StartDate = (Get-Date).AddDays(-7)
