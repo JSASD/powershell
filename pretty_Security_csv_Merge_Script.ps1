@@ -6,7 +6,7 @@ $endDate = (Get-Date).ToString("yyyy-MM-dd")
 $fileName = "${startDate}--${endDate}"
 
 # Specify the path to the logs folder
-$Logs = "\\\\js-vessel\Technology\Logging\Server-Logs\Security-Logs"
+$Logs = "\\js-vessel\Technology\Logging\Server-Logs\Security-Logs"
 
 # Specify the path to the destination folder
 $Master = "\\js-vessel\Technology\Logging\Server-Logs\Security-Logs\Master"
