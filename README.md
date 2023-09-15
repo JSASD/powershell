@@ -1,2 +1,2 @@
-# powershell
-Set of PowerShell scripts
+# Powershell Scripts
+Set of PowerShell scripts used by the district.
