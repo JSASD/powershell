@@ -4,7 +4,7 @@ Deploys a printer using PowerShell and a few arguments
 ## deploy-printer.ps1
 ### Required arguments
  - `-printServer`: Print server to add from
-   - This must be just a DNS namae, such as `printserver.company.com`
+   - This must be a DNS name, such as `printserver.company.com`
  - `-printerName`: Name of shared printer on server
 
 ### Optional arguments
@@ -12,6 +12,6 @@ Deploys a printer using PowerShell and a few arguments
 
 ## undeploy-printer.ps1
 ### Required arguments
- - `-printServer`: Print server to add from
-   - This must be just a DNS namae, such as `printserver.company.com`
+ - `-printServer`: Print server attached to the printer to remove
+   - This must be a DNS name, such as `printserver.company.com`
  - `-printerName`: Name of shared printer on server
