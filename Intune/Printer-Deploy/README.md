@@ -15,3 +15,7 @@ Deploys a printer using PowerShell and a few arguments
  - `-printServer`: Print server attached to the printer to remove
    - This must be a DNS name, such as `printserver.company.com`
  - `-printerName`: Name of shared printer on server
+
+## detect-printer.ps1
+### Required changes
+ - You must change the server name and printer name to match as command line arguments cannot be passed for Intune detection scripts.
